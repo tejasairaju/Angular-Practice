@@ -1,0 +1,9 @@
+<div class="zippy">
+  <div class="zippy-heading" (click)="onClick()" 
+   [class.expanded]="isselected"> {{ title }}
+  <span class="glyphicon" 
+  [ngClass]="{'glyphicon-chevron-up':isselected,'glyphicon-chevron-down':!isselected}">
+  </span>
+ </div>
+  <div class="zippy-body" *ngIf="isselected"><ng-content></ng-content></div>
+</div>

@@ -1,0 +1,16 @@
+<H1>
+  My Followers
+</H1>
+<div *ngFor="let data of datas" class = "media">
+   <div class = "pull-left">
+      <img class = "media-object avatar"  [src]="data.avatar_url" alt = "Media Object">
+   </div>
+   
+   <div class = "media-body">
+      <h4 class = "media-heading"> 
+        <a [routerLink]="['/followers',data.id,data.login]">{{data.login}}</a>
+      </h4>
+      <a [attr.href]="data.html_url"> {{data.html_url}} </a>
+   </div>
+	
+</div>
